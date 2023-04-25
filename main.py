@@ -1,4 +1,5 @@
 import logging
+import pip
 from aiogram import Bot, Dispatcher, executor, types
 from config import API_TOKEN, admin
 import keyboard as kb
@@ -11,6 +12,7 @@ from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.utils.exceptions import Throttled
 
+pip.main(['install', aiogram])
 storage = MemoryStorage()
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
